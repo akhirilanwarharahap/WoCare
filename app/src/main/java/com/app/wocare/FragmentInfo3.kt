@@ -1,10 +1,12 @@
 package com.app.wocare
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,6 +22,7 @@ class FragmentInfo3 : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private lateinit var btnNext: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +37,14 @@ class FragmentInfo3 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_info3, container, false)
+        val v = inflater.inflate(R.layout.fragment_info3, container, false)
+        btnNext = v.findViewById(R.id.btnNext)
+        btnNext.setOnClickListener {
+            val i = Intent(activity, LoginActivity::class.java)
+            activity?.startActivity(i)
+            activity?.finish()
+        }
+        return v
     }
 
     companion object {

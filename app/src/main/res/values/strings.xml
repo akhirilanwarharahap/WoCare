@@ -4,4 +4,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="skip">Skip</string>
+    <string name="signin">Already have an account?</string>
+    <string name="signup">Don\'t have an account?</string>
+    <string name="text1">Effortlessly track your cycle for accurate</string>
+    <string name="hint">*****</string>
 </resources>

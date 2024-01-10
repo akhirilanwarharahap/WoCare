@@ -6,16 +6,6 @@
     tools:context=".FragmentInfo3">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:textSize="15sp"
-        android:textColor="@color/teal"
-        android:text="@string/skip"/>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,20 +15,22 @@
         tools:ignore="UselessParent">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
             android:src="@drawable/frame3"
             android:contentDescription="TODO"
             android:layout_marginBottom="20dp"/>
 
         <TextView
+            android:id="@+id/tv1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Effortlessly track your cycle for accurate"
+            android:text="@string/text1"
             android:textSize="15sp"
             android:textColor="@color/black" />
 
         <TextView
+            android:id="@+id/tv2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="predictions and better insights"
@@ -54,6 +46,7 @@
             android:contentDescription="TODO" />
 
         <TextView
+            android:id="@+id/btnNext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Next"
