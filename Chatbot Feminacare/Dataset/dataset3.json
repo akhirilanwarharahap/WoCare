@@ -16,9 +16,9 @@
       "responses": ["Dengan senang hati :)", "Sama-sama yaa"]
     },
     {
-      "tag": "tentang_feminacare",
-      "patterns": ["Apa itu feminacare?", "feminacare itu apa?", "Definisikan feminacare", "Apa yang dimaksud dengan feminacare?", "feminacare", "Jelaskan feminacare"],
-      "responses": ["feminacare adalah teman bicara kamu untuk membahas permasalahan menstruasi. Jangan malu untuk bertanya dengan aku tentang permasalahan anda"]
+      "tag": "tentang_wocare",
+      "patterns": ["Apa itu wocare?", "wocare itu apa?", "Definisikan wocare", "Apa yang dimaksud dengan wocare?", "wocare", "Jelaskan wocare"],
+      "responses": ["wocare adalah teman bicara kamu untuk membahas permasalahan menstruasi. Jangan malu untuk bertanya dengan aku tentang permasalahan anda"]
     },
     {
       "tag": "tentang_aku",
@@ -28,7 +28,7 @@
 
     {
       "tag": "pengertian_menstruasi",
-      "patterns": ["Apa pengertian menstruasi?", "menstruasi itu apa?", "Definisikan menstruasi.", "Apa yang dimaksud dengan menstruasi?", "menstruasi", "Jelaskan menstruasi"],
+      "patterns": ["Apa pengertian menstruasi?", "menstruasi itu apa?", "Definisikan menstruasi.", "Apa yang dimaksud dengan menstruasi?", "apa itu menstruasi", "Jelaskan menstruasi"],
       "responses": [
         "Menstruasi adalah proses alami yang terjadi pada wanita setiap bulan. Selama menstruasi, tubuh melepaskan lapisan rahim yang tidak diperlukan melalui vagina.",
         "Menstruasi adalah proses peluruhan lapisan dalam pada dinding rahim wanita (endometrium) yang mengandung banyak pembuluh darah dan umumnya berlangsung selama 5-7 hari setiap bulannya. Biasanya siklus menstruasi berlangsung hingga usia 50 tahun. Adapun masa pasca berhenti menstruasi dinamakan sebagai menopause."
@@ -59,16 +59,9 @@
     },
     {
       "tag": "gejala_pms",
-      "patterns": ["Apa saja gejala pramenstruasi (PMS)?", "Tanda-tanda PMS", "Gejala sebelum menstruasi", "Gejala pramenstruasi"],
+      "patterns": ["Apa saja gejala pramenstruasi (PMS)?", "Tanda-tanda PMS", "Gejala sebelum menstruasi", "Gejala pramenstruasi", "Apa gejala dari PMS"],
       "responses": [
         "Gejala pramenstruasi (PMS) dapat mencakup perubahan suasana hati, iritabilitas, pembengkakan payudara, sakit kepala, nyeri perut, kelelahan, dan nafsu makan yang tidak stabil. PMS biasanya muncul sebelum menstruasi dan berangsur membaik setelah menstruasi dimulai."
-      ]
-    },
-    {
-      "tag": "diagnosis_gangguan_menstruasi",
-      "patterns": ["Bagaimana cara mendiagnosis gangguan menstruasi?", "Cara mendeteksi gangguan menstruasi", "Proses diagnosis gangguan menstruasi", "Cara dokter mendiagnosis gangguan menstruasi"],
-      "responses": [
-        "Mendiagnosis gangguan menstruasi melibatkan sejumlah langkah, termasuk wawancara medis, pemeriksaan fisik, pemeriksaan darah untuk mengukur tingkat hormon, pemindaian ultrasonografi untuk melihat kondisi organ reproduksi, dan kadang-kadang histeroskopi untuk memeriksa rahim. Dokter akan mengevaluasi gejala Anda, riwayat menstruasi, dan hasil pemeriksaan untuk menentukan penyebab gangguan menstruasi dan merencanakan pengobatan yang sesuai."
       ]
     },
     {
@@ -87,14 +80,6 @@
         "Opsi pengobatan untuk gangguan menstruasi dapat mencakup perubahan gaya hidup, penggunaan kontrasepsi hormonal, obat antiinflamasi nonsteroid (OAINS) untuk mengatasi nyeri, terapi hormon, dan dalam kasus yang lebih serius, pembedahan. Pengobatan yang paling efektif akan tergantung pada penyebab gangguan dan gejala yang dialami oleh individu. Konsultasikan dengan dokter untuk rencana pengobatan yang sesuai.",
         "Pilihan pengobatan untuk gangguan menstruasi dapat mencakup perubahan gaya hidup, penggunaan kontrasepsi hormonal, obat antiinflamasi nonsteroid (OAINS) untuk mengatasi nyeri, terapi hormon, dan dalam kasus yang lebih serius, pembedahan. Pengobatan yang tepat akan tergantung pada penyebab gangguan dan gejala yang dialami oleh individu.",
         "Pilihan pengobatan untuk gangguan menstruasi biasanya dibuat setelah dokter melakukan diagnosis yang akurat. Langkah-langkah umumnya melibatkan:\n1. Evaluasi dan diagnosis: Dokter akan melakukan pemeriksaan fisik, riwayat kesehatan, dan mungkin pemeriksaan tambahan seperti tes darah atau pemindaian. Ini akan membantu mereka menentukan jenis dan penyebab gangguan.\n2. Diskusi pilihan pengobatan: Dokter akan menjelaskan opsi pengobatan yang tersedia, termasuk manfaat, risiko, dan alternatifnya.\n3. Keputusan bersama: Anda akan berdiskusi dengan dokter Anda untuk memilih pengobatan yang sesuai berdasarkan preferensi, kebutuhan, dan tingkat kenyamanan Anda.\n4. Pengawasan dan tindak lanjut: Pengobatan akan memerlukan pemantauan dan tindak lanjut dengan dokter untuk memastikan efektivitasnya."
-      ]
-    },
-    {
-      "tag": "dampak_gangguan_menstruasi",
-      "patterns": ["Apa dampak yang mungkin terjadi akibat gangguan menstruasi?", "Efek samping gangguan menstruasi", "Dampak buruk gangguan menstruasi", "dampak gangguan menstruasi"],
-      "responses": [
-        "Gangguan menstruasi yang tidak diobati dapat menyebabkan sejumlah komplikasi. Beberapa komplikasi yang mungkin termasuk anemia karena kehilangan darah yang berkepanjangan, ketidaksuburan jika gangguan tersebut memengaruhi ovulasi atau fungsi rahim, serta ketidaknyamanan atau gangguan kualitas hidup. Selain itu, gangguan menstruasi yang disebabkan oleh masalah hormon tertentu dapat meningkatkan risiko masalah kesehatan lain, seperti osteoporosis. Oleh karena itu, sangat penting untuk mengobati gangguan menstruasi sesegera mungkin dan mengikuti saran dokter Anda.",
-        "Gangguan menstruasi yang tidak diobati atau tidak terkontrol dengan baik dapat menyebabkan komplikasi seperti anemia karena kehilangan darah yang berlebihan, ketidaksuburan jika gangguan tersebut mengganggu ovulasi atau proses reproduksi, serta masalah kesehatan lainnya. Penting untuk mencari perawatan medis jika Anda mengalami gangguan menstruasi yang parah atau berkepanjangan."
       ]
     },
     {
@@ -156,13 +141,6 @@
       ]
     },
     {
-      "tag": "jamu_keputihan",
-      "patterns": ["Apakah jamu pelancar menstruasi dapat digunakan untuk mengatasi keputihan?", "Jamu pelancar menstruasi untuk mengatasi keputihan", "Obat herbal untuk keputihan", "jamu tradisional mengatasi keputihan"],
-      "responses": [
-        "Sebaiknya hindari menggunakan jamu pelancar menstruasi atau obat herbal tanpa konsultasi medis untuk mengatasi keputihan atau masalah menstruasi lainnya. Penggunaan jamu atau obat herbal dapat memiliki efek samping dan interaksi obat yang berpotensi berbahaya. Lebih baik berkonsultasi dengan dokter yang dapat memberikan pengobatan yang tepat sesuai dengan penyebab keputihan."
-      ]
-    },
-    {
       "tag": "ciri_ciri_darah_menstruasi_normal",
       "patterns": [
         "Apa ciri-ciri darah menstruasi yang normal?",
@@ -189,28 +167,11 @@
         "Penebalan dinding rahim (endometrial hyperplasia) biasanya disebabkan oleh ketidakseimbangan hormon, terutama peningkatan kadar estrogen tanpa penyeimbang dari progesteron. Faktor lain yang dapat menyebabkan penebalan rahim termasuk obesitas, sindrom ovarium polikistik (PCOS), diabetes, dan penggunaan tamoxifen. Penting untuk mengidentifikasi penyebabnya agar pengobatan yang tepat dapat diberikan oleh dokter."
       ]
     },
-
-    {
-      "tag": "cara_kerja_IUD",
-      "patterns": ["Bagaimana cara kerja kontrasepsi IUD?", "Cara kerja IUD", "Prinsip kerja IUD", "Mekanisme IUD"],
-      "responses": [
-        "IUD (Intrauterine Device) adalah metode kontrasepsi yang ditempatkan di dalam rahim oleh dokter. IUD bekerja dengan beberapa mekanisme, termasuk mencegah sperma mencapai sel telur, mengubah lendir serviks untuk membuatnya lebih sulit bagi sperma masuk ke rahim, dan mencegah pembuahan sel telur. Beberapa IUD juga mengandung hormon progesteron yang mempengaruhi siklus menstruasi dan mencegah ovulasi.",
-        "IUD (Intrauterine Device) adalah alat kontrasepsi yang dimasukkan ke dalam rahim oleh dokter. Ada dua jenis IUD: hormonal dan non-hormonal. IUD bekerja dengan mencegah kehamilan dengan beberapa mekanisme, seperti menghambat sperma atau mencegah pembuahan. IUD dapat digunakan sebagai metode kontrasepsi jangka panjang, dengan beberapa jenis yang dapat bertahan hingga beberapa tahun."
-      ]
-    },
     {
       "tag": "jenis_IUD",
       "patterns": ["Apa saja jenis-jenis IUD", "Macam-macam IUD", "jenis IUD"],
       "responses": [
         "Ada dua jenis utama IUD: IUD hormonal dan IUD non-hormonal. IUD hormonal melepaskan hormon progesteron yang memengaruhi siklus menstruasi dan mencegah ovulasi. IUD non-hormonal umumnya mengandung tembaga dan bekerja dengan cara membuat lingkungan rahim tidak sesuai untuk pembuahan dan kehamilan. Kedua jenis IUD efektif sebagai kontrasepsi, tetapi memiliki mekanisme kerja yang berbeda."
-      ]
-    },
-    {
-      "tag": "perbedaan_IUD_hormonal_non",
-      "patterns": ["IUD berhormon vs non-hormon", "perbedaan IUD berhormon dan non-hormon", "Perbedaan IUD hormonal dan IUD non-hormonal"],
-      "responses": [
-        " IUD hormonal maupun non-hormonal memiliki tingkat keberhasilan yang sangat tinggi, sekitar 99% atau lebih. Perbedaan utama antara keduanya adalah bagaimana mereka bekerja dan efek samping yang mungkin timbul. IUD hormonal mengandung hormon progestin yang dapat mengubah lendir serviks dan mencegah pembuahan, sementara IUD non-hormonal bekerja dengan cara menghambat sperma. Pilihan antara keduanya akan tergantung pada preferensi dan kebutuhan pribadi.",
-        " IUD hormonal melepaskan hormon progesteron yang memengaruhi siklus menstruasi dan mencegah ovulasi. IUD non-hormonal umumnya mengandung tembaga dan bekerja dengan cara membuat lingkungan rahim tidak sesuai untuk pembuahan dan kehamilan. Kedua jenis IUD efektif sebagai kontrasepsi, tetapi memiliki mekanisme kerja yang berbeda."
       ]
     },
     {
