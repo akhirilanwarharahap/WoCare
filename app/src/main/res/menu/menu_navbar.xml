@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/today"
+        android:title="Today"
+        android:icon="@drawable/today_icon"/>
+    <item
+        android:id="@+id/insight"
+        android:title="Insight"
+        android:icon="@drawable/insight_icon"/>
+    <item
+        android:id="@+id/camera"
+        android:title="Camera"
+        android:icon="@drawable/camera_icon"/>
+    <item
+        android:id="@+id/woask"
+        android:title="Woask"
+        android:icon="@drawable/woask_icon"/>
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/profile_icon"/>
+</menu>

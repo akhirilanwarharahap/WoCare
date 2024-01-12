@@ -16,6 +16,10 @@
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
+    <style name="btnOk" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">@color/main</item>
+    </style>
+
     <style name="bottomDialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
         <item name="android:colorBackground">@android:color/transparent</item>
     </style>

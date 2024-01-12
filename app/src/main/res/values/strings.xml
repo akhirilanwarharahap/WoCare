@@ -8,4 +8,18 @@
     <string name="signup">Don\'t have an account?</string>
     <string name="text1">Effortlessly track your cycle for accurate</string>
     <string name="hint">*****</string>
+    <string name="loading">Loading...</string>
+    <string name="info2">Health for vital wellness cues</string>
+    <string name="info1">predictions and better insights</string>
+    <string name="start">Start Your Cycle!</string>
+    <string name="next">Next</string>
+    <string name="message">Message WoAsk...</string>
+    <string name="woask1">WoAsk can only accept question in</string>
+    <string name="whoask2">Indonesian language</string>
+    <string name="today">Today</string>
+    <string name="todo">TODO</string>
+    <string name="capture">Capture a Photo!</string>
+    <string name="tv1">Take a photo or upload a picture of menstrual</string>
+    <string name="tv2">blood to assess your menstrual blood health</string>
+    <string name="ok">OK</string>
 </resources>

@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
-import android.view.LayoutInflater
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
@@ -13,10 +12,11 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class LoginActivity : AppCompatActivity() {
 
-    lateinit var edPass: EditText
-    lateinit var show: ImageView
+    private lateinit var edPass: EditText
+    private lateinit var show: ImageView
     private lateinit var forgotPass: TextView
     private lateinit var signUp: TextView
+    private lateinit var login: TextView
     private var drawableId: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +26,10 @@ class LoginActivity : AppCompatActivity() {
         show = findViewById(R.id.show)
         forgotPass = findViewById(R.id.tvForgotPass)
         signUp = findViewById(R.id.tvSignUp)
+        login = findViewById(R.id.login)
         show.tag = R.drawable.eye_slash
+
+        login.setOnClickListener { startActivity(Intent(this, HomeActivity::class.java)) }
 
         show.setOnClickListener {
             //  Show/Hide Password

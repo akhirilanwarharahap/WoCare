@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="teal">#2B8686</color>
     <color name="main">#FF7272</color>
+    <color name="grey">#F9F9F9</color>
     <color name="grey_200">#F5F5F7</color>
     <color name="grey_400">#89969F</color>
 </resources>

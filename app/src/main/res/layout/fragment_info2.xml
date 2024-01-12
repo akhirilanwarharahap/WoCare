@@ -22,16 +22,17 @@
             android:layout_marginBottom="20dp"/>
 
         <TextView
+            android:id="@+id/tv1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Effortlessly track your cycle for accurate"
+            android:text="@string/loading"
             android:textSize="15sp"
             android:textColor="@color/black" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="predictions and better insights"
+            android:text="@string/info2"
             android:textSize="15sp"
             android:textColor="@color/black" />
 
@@ -46,7 +47,7 @@
             android:id="@+id/btnNext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Next"
+            android:text="@string/next"
             android:background="@drawable/bg_button"
             android:textColor="@color/white"
             android:textSize="15sp"
