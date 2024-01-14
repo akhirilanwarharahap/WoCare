@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "38798188715",
+    "project_id": "wocare-6ad49",
+    "storage_bucket": "wocare-6ad49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:38798188715:android:5f5a9e78f9d1f1219017ee",
+        "android_client_info": {
+          "package_name": "com.app.wocare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "38798188715-k6us3bevr5fjs949fmo0245hbjivv3dg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.wocare",
+            "certificate_hash": "b79a0cce1e56028f344cd77e3ffc4fbfb9c05ae6"
+          }
+        },
+        {
+          "client_id": "38798188715-l8hh1bsh1td8k4s9u60f4a2hdkr1bvma.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5cNnTON9Q0attzi4mZNsQhiwLMaKIgLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "38798188715-l8hh1bsh1td8k4s9u60f4a2hdkr1bvma.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">WoCare</string>
+    <string name="splash">Don’t let periods stop you</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">Skip</string>
+    <string name="signin">Already have an account?</string>
+    <string name="signup">Don\'t have an account?</string>
+    <string name="text1">Effortlessly track your cycle for accurate</string>
+    <string name="hint">*****</string>
+    <string name="defualt_web_client_id">38798188715-l8hh1bsh1td8k4s9u60f4a2hdkr1bvma.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">926516765572952</string>
+    <string name="fb_login_protocol_scheme">f16f0e09cfc69d7b3fc96472c7384ba5</string>
+    <string name="facebook_client_token">VzSiQcXRmi2kyjzcA+mYLEtbGVs=</string>
+</resources>
