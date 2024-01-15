@@ -22,4 +22,30 @@
     <string name="tv1">Take a photo or upload a picture of menstrual</string>
     <string name="tv2">blood to assess your menstrual blood health</string>
     <string name="ok">OK</string>
+    <string name="height">Height</string>
+    <string name="age">Age</string>
+    <string name="weight">Weight</string>
+    <string name="period_length">Period Length</string>
+    <string name="cycle_length">Cycle Length</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="enable_notifications">Enable Notifications</string>
+    <string name="logout">Logout</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
+    <string name="insight">Insight</string>
+    <string name="camera">Camera</string>
+    <string name="woask">WoAsk</string>
+    <string name="profile">Profile</string>
+    <string name="january">January</string>
+    <string name="topic">Topic</string>
+    <string name="details">See Details</string>
+    <string name="welcome">Welcome,</string>
+    <string name="menstrual_health">Menstrual Health</string>
+    <string name="reproductive_health">Reproductive Health</string>
+    <string name="healthy_lifestyle">Healthy Lifestyle</string>
+    <string name="defualt_web_client_id">38798188715-l8hh1bsh1td8k4s9u60f4a2hdkr1bvma.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">926516765572952</string>
+    <string name="fb_login_protocol_scheme">f16f0e09cfc69d7b3fc96472c7384ba5</string>
+    <string name="facebook_client_token">VzSiQcXRmi2kyjzcA+mYLEtbGVs=</string>
 </resources>

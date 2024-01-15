@@ -2,22 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/today"
-        android:title="Today"
+        android:title="@string/today"
         android:icon="@drawable/today_icon"/>
     <item
         android:id="@+id/insight"
-        android:title="Insight"
+        android:title="@string/insight"
         android:icon="@drawable/insight_icon"/>
     <item
         android:id="@+id/camera"
-        android:title="Camera"
+        android:title="@string/camera"
         android:icon="@drawable/camera_icon"/>
     <item
         android:id="@+id/woask"
-        android:title="Woask"
+        android:title="@string/woask"
         android:icon="@drawable/woask_icon"/>
     <item
         android:id="@+id/profile"
-        android:title="Profile"
+        android:title="@string/profile"
         android:icon="@drawable/profile_icon"/>
 </menu>

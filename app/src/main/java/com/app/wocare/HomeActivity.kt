@@ -1,50 +1,61 @@
 package com.app.wocare
 
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
 
-    lateinit var navbar: BottomNavigationView
-    lateinit var tv: TextView
+    private lateinit var navbar: BottomNavigationView
+    private lateinit var judulFragment: TextView
+    private lateinit var profilePengguna: RelativeLayout
 
-    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        tv = findViewById(R.id.tv)
+        //  define id
+        profilePengguna = findViewById(R.id.rl1)
+        judulFragment = findViewById(R.id.tv)
         navbar = findViewById(R.id.botnavbar)
+
+        //  value
+        val woask = "WoAsk"
+        val profile = "Profile"
+        val camera = "Camera"
+        val insight = "Insight"
+
+        navbar.itemIconSize = 80
         navbar.itemIconTintList = null
         navbar.setOnItemSelectedListener{
             when(it.itemId) {
                 R.id.woask -> {
+                    hideProfile(woask)
                     loadFragments(WoAskFragment())
-                    tv.text = "WoAsk"
                     true
                 }
                 R.id.today -> {
-                    tv.text = "Today"
+                    showProfile()
                     loadFragments(TodayFragment())
                     true
                 }
                 R.id.profile -> {
-                    tv.text = "Profile"
+                    hideProfile(profile)
                     loadFragments(ProfileFragment())
                     true
                 }
                 R.id.insight -> {
-                    tv.text = "Insight"
+                    hideProfile(insight)
                     loadFragments(InsightFragment())
                     true
                 }
                 R.id.camera -> {
+                    hideProfile(camera)
                     loadFragments(CameraFragment())
-                    tv.text = "Camera"
                     true
                 }
                 else -> {
@@ -52,6 +63,18 @@ class HomeActivity : AppCompatActivity() {
                 }
             }
         }
+        navbar.selectedItemId = R.id.today
+    }
+
+    private fun showProfile() {
+        profilePengguna.visibility = View.VISIBLE
+        judulFragment.visibility = View.GONE
+    }
+
+    private fun hideProfile(data: String) {
+        profilePengguna.visibility = View.GONE
+        judulFragment.visibility = View.VISIBLE
+        judulFragment.text = data
     }
 
     private fun loadFragments(fragment: Fragment){

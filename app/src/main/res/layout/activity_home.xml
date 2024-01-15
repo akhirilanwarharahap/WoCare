@@ -8,27 +8,89 @@
     android:background="@color/white"
     tools:context=".HomeActivity">
 
-    <LinearLayout
-        android:id="@+id/ll1"
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_marginTop="35dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="vertical"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tv"
+        <LinearLayout
+            android:id="@+id/linearLayout3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center"
-            android:padding="10dp"
-            android:text="@string/today"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome"
+                android:textColor="@color/teal"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rika Amelia"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/notif"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/outline_notifications_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/notif"
+            android:layout_toEndOf="@+id/linearLayout3"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical|end"
+            android:text="@string/january"
             android:textColor="@color/black"
-            android:textSize="15sp" />
-    </LinearLayout>
+            android:textSize="12sp"
+            app:drawableEndCompat="@drawable/baseline_calendar_24" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_marginTop="35dp"
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:text="@string/today"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="rl1,tv"
+        app:barrierDirection="bottom" />
 
     <FrameLayout
         android:id="@+id/frame"
@@ -37,7 +99,7 @@
         app:layout_constraintBottom_toTopOf="@+id/botnavbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ll1" />
+        app:layout_constraintTop_toBottomOf="@+id/barrier" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/botnavbar"

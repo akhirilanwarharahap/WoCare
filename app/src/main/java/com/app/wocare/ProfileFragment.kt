@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.SwitchCompat
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,6 +21,7 @@ class ProfileFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private lateinit var tombolNotification: SwitchCompat
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +36,22 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        val v = inflater.inflate(R.layout.fragment_profile, container, false)
+        //  define id
+        tombolNotification = v.findViewById(R.id.swnotif)
+
+        //  set notif defaults
+        tombolNotification.isChecked = false
+        tombolNotification.text = tombolNotification.textOff
+        //  on/off notif
+        tombolNotification.setOnClickListener {
+            if (tombolNotification.isChecked){
+                tombolNotification.text = tombolNotification.textOn
+            } else {
+                tombolNotification.text = tombolNotification.textOff
+            }
+        }
+        return v
     }
 
     companion object {
