@@ -48,7 +48,7 @@ class FragmentInfo1 : Fragment() {
 
         btnNext.setOnClickListener{
             val secondFrag = FragmentInfo2()
-            val trans: FragmentTransaction = requireFragmentManager().beginTransaction()
+            val trans: FragmentTransaction = parentFragmentManager.beginTransaction()
             trans.replace(R.id.placeholder, secondFrag)
             trans.addToBackStack(null)
             trans.commit()

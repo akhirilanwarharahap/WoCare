@@ -9,6 +9,7 @@
     android:layout_height="wrap_content">
 
     <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/poto"
         android:layout_width="80dp"
         android:layout_height="match_parent"
         android:src="@color/main"
@@ -16,19 +17,21 @@
         android:contentDescription="@string/todo" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/judul"
             android:layout_gravity="center"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
             android:textSize="20sp"
             android:textColor="@color/black"
-            android:text="Knowledge is Power: Let's Talk About Sexual Education"/>
+            android:text="Knowledge is Power: Let's Talk About Sexual Education" />
 
         <TextView
             android:paddingStart="10dp"
