@@ -48,4 +48,7 @@
     <string name="facebook_app_id">926516765572952</string>
     <string name="fb_login_protocol_scheme">f16f0e09cfc69d7b3fc96472c7384ba5</string>
     <string name="facebook_client_token">VzSiQcXRmi2kyjzcA+mYLEtbGVs=</string>
+    <string name="cm">cm</string>
+    <string name="kg">kg</string>
+    <string name="done">Done</string>
 </resources>

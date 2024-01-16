@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center_vertical"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textColor="@color/black"
             android:text="Knowledge is Power: Let's Talk About Sexual Education" />
 

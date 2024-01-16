@@ -2,15 +2,20 @@ package com.app.wocare.adapters
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.RecyclerView
+import com.app.wocare.DetailsInsightFragment
+import com.app.wocare.HomeActivity
 import com.app.wocare.R
 import com.app.wocare.models.News
 import com.squareup.picasso.Picasso
+import org.apache.commons.lang3.StringUtils
 
 class InsightAdapter(private var data: MutableList<News>, context: Context): RecyclerView.Adapter<InsightAdapter.MyViewHolder>() {
 
@@ -27,18 +32,36 @@ class InsightAdapter(private var data: MutableList<News>, context: Context): Rec
     override fun onBindViewHolder(holder: MyViewHolder, pos: Int) {
         val listData = data[pos]
 
-        val panjangJudul = listData.judul?.length
+        val fotoBerita = listData.foto
+        val isiBerita = listData.isi
         val judulBerita = listData.judul
-        val limitJudul = judulBerita?.substring(0,35)
+        val limitJudulBerita = StringUtils.abbreviate(judulBerita, 35)
 
-        if (panjangJudul != null) {
-            if (panjangJudul >= 35){
-                holder.judulBerita.text = "$limitJudul..."
-            } else {
-                holder.judulBerita.text = judulBerita
-            }
+        holder.judulBerita.text = limitJudulBerita
+        Picasso.get().load(fotoBerita).fit().into(holder.fotoBerita)
+
+        holder.itemView.setOnClickListener{
+
+            val itemView = holder.itemView
+            val bundle = Bundle()
+            bundle.putString("judulBerita", judulBerita)
+            bundle.putString("isiBerita", isiBerita)
+            bundle.putString("fotoBerita", fotoBerita)
+
+            switchFragment(bundle, itemView)
         }
-        Picasso.get().load(listData.foto).fit().into(holder.fotoBerita)
+    }
+
+    private fun switchFragment(bundle: Bundle, itemView: View) {
+        val detailFragment = DetailsInsightFragment()
+        val home = itemView.context as HomeActivity
+
+        val transaction = home.supportFragmentManager.beginTransaction()
+        detailFragment.arguments = bundle
+        transaction.replace(R.id.frame, detailFragment)
+        transaction.addToBackStack(null)
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+        transaction.commit()
     }
 
     @SuppressLint("NotifyDataSetChanged")

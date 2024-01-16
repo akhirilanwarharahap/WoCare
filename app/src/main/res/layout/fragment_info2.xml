@@ -16,9 +16,10 @@
 
         <ImageView
             android:layout_width="match_parent"
+            android:maxWidth="350dp"
             android:layout_height="300dp"
             android:src="@drawable/frame2"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/todo"
             android:layout_marginBottom="20dp"/>
 
         <TextView

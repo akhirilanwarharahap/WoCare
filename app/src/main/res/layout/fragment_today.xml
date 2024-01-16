@@ -134,7 +134,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/menstrual_health"
                         android:textColor="@color/main"
-                        android:textSize="13sp"
+                        android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -161,7 +161,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/reproductive_health"
                         android:textColor="@color/blue_400"
-                        android:textSize="13sp"
+                        android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -187,7 +187,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/healthy_lifestyle"
                         android:textColor="@color/orange_400"
-                        android:textSize="13sp"
+                        android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <ImageView

@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
@@ -13,6 +14,7 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var navbar: BottomNavigationView
     private lateinit var judulFragment: TextView
     private lateinit var profilePengguna: RelativeLayout
+    private lateinit var bgJudul: RelativeLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +23,7 @@ class HomeActivity : AppCompatActivity() {
         //  define id
         profilePengguna = findViewById(R.id.rl1)
         judulFragment = findViewById(R.id.tv)
+        bgJudul = findViewById(R.id.rl)
         navbar = findViewById(R.id.botnavbar)
 
         //  value
@@ -29,7 +32,8 @@ class HomeActivity : AppCompatActivity() {
         val camera = "Camera"
         val insight = "Insight"
 
-        navbar.itemIconSize = 80
+        //  navbar
+        navbar.itemIconSize = 90
         navbar.itemIconTintList = null
         navbar.setOnItemSelectedListener{
             when(it.itemId) {
@@ -68,18 +72,19 @@ class HomeActivity : AppCompatActivity() {
 
     private fun showProfile() {
         profilePengguna.visibility = View.VISIBLE
-        judulFragment.visibility = View.GONE
+        bgJudul.visibility = View.GONE
     }
 
     private fun hideProfile(data: String) {
         profilePengguna.visibility = View.GONE
-        judulFragment.visibility = View.VISIBLE
+        bgJudul.visibility = View.VISIBLE
         judulFragment.text = data
     }
 
     private fun loadFragments(fragment: Fragment){
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.frame, fragment)
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
         transaction.commit()
     }
 
