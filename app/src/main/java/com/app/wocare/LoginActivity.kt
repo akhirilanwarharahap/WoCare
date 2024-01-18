@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
         login = findViewById(R.id.login)
         show.tag = R.drawable.eye_slash
 
-        login.setOnClickListener { startActivity(Intent(this, HomeActivity::class.java)) }
+        login.setOnClickListener { startActivity(Intent(this, RegisterActivity::class.java)) }
 
         show.setOnClickListener {
             //  Show/Hide Password

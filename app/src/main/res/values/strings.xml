@@ -51,4 +51,11 @@
     <string name="cm">cm</string>
     <string name="kg">kg</string>
     <string name="done">Done</string>
+    <string name="lets">Let\'s Start</string>
+    <string name="username">Username</string>
+    <string name="fb">Continue With Facebook</string>
+    <string name="google">Continue With Google</string>
+    <string name="year">Year</string>
+    <string name="month">Month</string>
+    <string name="date">Date</string>
 </resources>
