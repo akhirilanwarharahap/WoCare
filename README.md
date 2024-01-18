@@ -22,5 +22,7 @@ Aplikasi prediksi menstruasi dengan algoritma machine learning
 
 
 ## Screenshots
-
-
+[Next Step](https://github.com/akhirilanwarharahap/WoCare/blob/ML/Gambar/WhatsApp%20Image%202024-01-18%20at%2023.59.06_97596e14.jpg?raw=true)
+[User Interface](https://github.com/akhirilanwarharahap/WoCare/blob/ML/Gambar/WhatsApp%20Image%202024-01-18%20at%2023.59.15_d0d89f03.jpg?raw=true)
+[User Interface](https://github.com/akhirilanwarharahap/WoCare/blob/ML/Gambar/WhatsApp%20Image%202024-01-18%20at%2023.59.19_7aca59f8.jpg?raw=true)
+[New Invation](https://github.com/akhirilanwarharahap/WoCare/blob/ML/Gambar/WhatsApp%20Image%202024-01-18%20at%2023.59.22_f8756dc1.jpg?raw=true)
