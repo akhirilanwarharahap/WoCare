@@ -37,6 +37,7 @@
                     app:srcCompat="@color/main" />
 
                 <TextView
+                    android:id="@+id/nama"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -62,6 +63,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tinggi"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="160cm"
@@ -109,6 +111,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/berat"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="48kg"

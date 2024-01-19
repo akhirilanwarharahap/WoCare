@@ -1,5 +1,6 @@
 package com.app.wocare
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -35,28 +36,27 @@ class Step2Fragment : Fragment() {
         tahun = v.findViewById(R.id.year)
         insertData()
 
-        //  dataUsername
-//        val data = this.arguments
-//        val dataUsername = data!!.getString("username")
-
         btnNext.setOnClickListener{
-//            val  dataTanggal = tanggal.text.toString()
-//            val  dataBulan = bulan.text.toString()
-//            val  dataTahun = tahun.text.toString()
-//
-//            if (dataTanggal.isEmpty() && dataBulan.isEmpty() && dataTahun.isEmpty()) {
-//                errorMessage()
-//            } else {
-//                val bundle = Bundle()
-//                bundle.putString("dataTanggal", dataTanggal)
-//                bundle.putString("dataBulan", dataBulan)
-//                bundle.putString("dataTahun", dataTahun)
-//                bundle.putString("dataUsername", dataUsername)
-//
-//            }
-            switchFragment()
+            val  dataTanggal = tanggal.text.toString()
+            val  dataBulan = bulan.text.toString()
+            val  dataTahun = tahun.text.toString()
+
+            if (dataTanggal.isEmpty() || dataBulan.isEmpty() || dataTahun.isEmpty()) {
+                errorMessage()
+            } else {
+                val tglLahir = "$dataTanggal/$dataBulan/$dataTahun"
+                saveDataToPreferences(tglLahir)
+                switchFragment()
+            }
         }
         return v
+    }
+
+    private fun saveDataToPreferences(dataTanggal: String) {
+        val sharedData = requireContext().getSharedPreferences("data", Context.MODE_PRIVATE)
+        val editor = sharedData.edit()
+        editor.putString("tglLahir", dataTanggal)
+        editor.apply()
     }
 
     private fun errorMessage() {

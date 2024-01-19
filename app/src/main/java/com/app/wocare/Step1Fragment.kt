@@ -33,21 +33,20 @@ class Step1Fragment : Fragment() {
         insertData()
 
         btnNext.setOnClickListener{
-//            val dataUsername = username.text.toString()
-//
-//            if (dataUsername.isEmpty()){
-//                errorMessage()
-//            } else {
-//                saveDatatoPrefences(dataUsername)
-//
-//            }
-            switchFragment()
+            val dataUsername = username.text.toString()
+
+            if (dataUsername.isEmpty()){
+                errorMessage()
+            } else {
+                saveDatatoPrefences(dataUsername)
+                switchFragment()
+            }
         }
         return v
     }
 
     private fun saveDatatoPrefences(dataUsername: String) {
-        val sharedData = requireContext().getSharedPreferences("dataUsername", Context.MODE_PRIVATE)
+        val sharedData = requireContext().getSharedPreferences("data", Context.MODE_PRIVATE)
         val editor = sharedData.edit()
         editor.putString("username", dataUsername)
         editor.apply()

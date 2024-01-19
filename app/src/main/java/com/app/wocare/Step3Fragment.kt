@@ -1,5 +1,6 @@
 package com.app.wocare
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,7 +16,7 @@ class Step3Fragment : Fragment() {
     // TODO: Rename and change types of parameters
     lateinit var btnNext: RelativeLayout
     private lateinit var pertanyaan: TextView
-    private lateinit var height: EditText
+    private lateinit var tinggi: EditText
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,35 +28,32 @@ class Step3Fragment : Fragment() {
         // value id
         btnNext = v.findViewById(R.id.btnNext)
         pertanyaan = v.findViewById(R.id.tvPertanyaan)
-        height = v.findViewById(R.id.edHeight)
+        tinggi = v.findViewById(R.id.edHeight)
         insertData()
-
-//        val data = this.arguments
-//        if (data != null){
-//            val dataTanggal = data.getString("dataTanggal")
-//            val dataBulan = data.getString("dataBulan")
-//            val dataTahun = data.getString("dataTahun")
-//            val dataUsername = data.getString("dataUsername")
-//        }
 
         btnNext.setOnClickListener{
 
-//            val dataHeight = height.text.toString()
-//
-//            if (dataHeight.isEmpty()){
-//                errorMessage()
-//            } else {
-//
-//
-//
-//            }
-            switchFragment()
+            val dataTinggi = tinggi.text.toString()
+
+            if (dataTinggi.isEmpty()){
+                errorMessage()
+            } else {
+                saveDataToPreferences(dataTinggi)
+                switchFragment()
+            }
         }
         return v
     }
 
+    private fun saveDataToPreferences(dataTinggi: String) {
+        val sharedData = requireContext().getSharedPreferences("data", Context.MODE_PRIVATE)
+        val editor = sharedData.edit()
+        editor.putString("tinggi", dataTinggi)
+        editor.apply()
+    }
+
     private fun errorMessage() {
-        Toast.makeText(requireContext(), "Tinggi belum di isi...", Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireContext(), "Berat belum di isi...", Toast.LENGTH_SHORT).show()
     }
 
     private fun switchFragment() {

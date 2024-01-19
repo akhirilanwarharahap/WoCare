@@ -123,6 +123,7 @@
             android:contentDescription="@string/todo" />
 
         <TextView
+            android:id="@+id/loginGoogle"
             android:layout_marginTop="10dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
@@ -139,6 +140,7 @@
             app:drawableStartCompat="@drawable/logo_google" />
 
         <TextView
+            android:id="@+id/loginFb"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:background="@drawable/bg_button_out"

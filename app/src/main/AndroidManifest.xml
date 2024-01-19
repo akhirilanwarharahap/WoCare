@@ -31,9 +31,6 @@
             android:value="@string/facebook_client_token" />
 
         <activity
-            android:name=".DetailsInsightActivity"
-            android:exported="false" />
-        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
