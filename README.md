@@ -1,35 +1,24 @@
 
 # Wocare
-Aplikasi prediksi menstruasi dengan algoritma machine learning
-
+Wocare is an app to help women around the world better understand Reproductive Health, especially menstruation. We believe that women's health and privacy are very important things to protect. Together with Wocare, let's protect the health of women in the world, because Wocare is a friend of women.
 
 ## Main Features
-
-- Main Activity
+- Blood Color Analyzer
+- Menstrual Calendar
 - Chatbot
-- BloodCheckup
-- Period Calendar
 - Articles
-
-## App Flow
-[Miro](https://www.figma.com/file/ExR5YWjbJ0nJGUw1h2Yiq7/HackFest-2024?type=design&node-id=0%3A1&mode=design&t=o61FqDRWK36r8oBU-1)
-
 
 ## Resource
 
 [Figma](https://www.figma.com/file/ExR5YWjbJ0nJGUw1h2Yiq7/HackFest-2024?type=design&node-id=0%3A1&mode=design&t=o61FqDRWK36r8oBU-1)
 
-## Color Reference
-
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Natural | ![#fcf2db](https://via.placeholder.com/10/fcf2db?text=+) #FCF2DB |
-| Primary Pink | ![#F4AEBA](https://via.placeholder.com/10/F4AEBA?text=+) #F4AEBA |
-| Neutral Pink | ![#EC729C](https://via.placeholder.com/10/EC729C?text=+) #EC729C |
-| Dark Pink | ![#C54C82](https://via.placeholder.com/10/C54C82?text=+) #C54C82 |
-
+## Our Team
+![alt text](https://github.com/akhirilanwarharahap/WoCare/blob/ML/Gambar/19.png?raw=true)
 
 ## Screenshots
+![alt text](https://github.com/akhirilanwarharahap/WoCare/blob/ML/Gambar/2.png?raw=true)
+![alt text](https://github.com/akhirilanwarharahap/WoCare/blob/ML/Gambar/10.png?raw=true)
+![alt text](https://github.com/akhirilanwarharahap/WoCare/blob/ML/Gambar/11.png?raw=true)
+![alt text](https://github.com/akhirilanwarharahap/WoCare/blob/ML/Gambar/13.png?raw=true)
 
-![WhatsApp Image 2024-01-07 at 19 34 32_62ff31de](https://github.com/theboysshackfast/wocare/assets/107613389/37bbbcf6-3df1-4138-a61e-0ec2049489a9)
 
