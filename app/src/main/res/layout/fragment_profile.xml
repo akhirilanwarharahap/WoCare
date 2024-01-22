@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginBottom="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+            app:layout_constraintBottom_toTopOf="@+id/btnSignOut"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -290,7 +290,7 @@
         </androidx.core.widget.NestedScrollView>
 
         <RelativeLayout
-            android:id="@+id/relativeLayout"
+            android:id="@+id/btnSignOut"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"

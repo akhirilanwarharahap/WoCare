@@ -55,7 +55,7 @@ dependencies {
     // Picasso
     implementation("com.squareup.picasso:picasso:2.8")
     // Firebase
-    implementation("com.google.firebase:firebase-auth:22.3.0")
+    implementation("com.google.firebase:firebase-auth:22.3.1")
     implementation("com.google.firebase:firebase-database:20.3.0")
     // commons-Lang3
     implementation("org.apache.commons:commons-lang3:3.12.0")

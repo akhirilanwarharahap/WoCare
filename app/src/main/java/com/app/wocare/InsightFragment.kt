@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -18,7 +19,8 @@ import com.google.firebase.database.ValueEventListener
 
 class InsightFragment : Fragment() {
     // TODO: Rename and change types of parameters
-    lateinit var rv: RecyclerView
+    private lateinit var rv: RecyclerView
+    private lateinit var loadingBar: ProgressBar
     lateinit var adapter: InsightAdapter
     var listData: MutableList<News> = ArrayList()
 
@@ -31,6 +33,7 @@ class InsightFragment : Fragment() {
 
         //  difine id
         rv = v.findViewById(R.id.rv)
+        loadingBar = v.findViewById(R.id.pb)
 
         adapter = InsightAdapter(listData, requireContext())
         adapter.setHasStableIds(true)
@@ -56,11 +59,20 @@ class InsightFragment : Fragment() {
                         Toast.makeText(requireContext(), "List Kosong...", Toast.LENGTH_SHORT).show()
                     }
                     adapter.notifyDataSetChanged()
+                    checkList()
                 }
             }
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
         })
+    }
+
+    private fun checkList() {
+        if (adapter.itemCount == 0){
+            loadingBar.visibility = View.VISIBLE
+        } else {
+            loadingBar.visibility = View.GONE
+        }
     }
 }

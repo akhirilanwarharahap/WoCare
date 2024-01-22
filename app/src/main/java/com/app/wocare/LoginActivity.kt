@@ -6,15 +6,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
+import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.view.isVisible
 import com.app.wocare.models.UserDetails
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.tasks.Task
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.firebase.auth.FirebaseAuth
@@ -34,11 +38,14 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var forgotPass: TextView
     private lateinit var signUp: TextView
     private lateinit var login: TextView
+    private lateinit var loadingBar: ProgressBar
     private lateinit var loginWithGoogle: TextView
     private lateinit var googleSignInClient: GoogleSignInClient
     private var drawableId: Int = 0
     private var firebaseAuth: FirebaseAuth = Firebase.auth
-    private lateinit var uid: String
+    private var uid: String? = null
+    private var showLoading: Int = View.VISIBLE
+    private var hideLoading: Int = View.GONE
 
     override fun onStart() {
         super.onStart()
@@ -53,6 +60,12 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.defualt_web_client_id))
+            .requestEmail()
+            .build()
+        googleSignInClient = GoogleSignIn.getClient(this, gso)
+
         //  define Id
         password = findViewById(R.id.edPassword)
         show = findViewById(R.id.show)
@@ -60,16 +73,17 @@ class LoginActivity : AppCompatActivity() {
         signUp = findViewById(R.id.tvSignUp)
         login = findViewById(R.id.login)
         email = findViewById(R.id.edEmail)
+        loadingBar = findViewById(R.id.pb)
         loginWithGoogle = findViewById(R.id.loginGoogle)
         show.tag = R.drawable.eye_slash
-        val currentAccount = firebaseAuth.currentUser
-        if (currentAccount != null){
-            uid = currentAccount.uid
-        }
 
         login.setOnClickListener {
             val email = email.text.toString()
             val password = password.text.toString()
+
+            if (!loadingBar.isVisible){
+                loadingAnimasi(showLoading)
+            }
 
             if (email.isEmpty()){
                 messageError("Email Masih kosong...")
@@ -102,6 +116,19 @@ class LoginActivity : AppCompatActivity() {
             val dialog = BottomSheetDialog(this, R.style.bottomDialogStyle)
             val v = layoutInflater.inflate(R.layout.bottom_sheet, nothing)
             dialog.setContentView(v)
+
+            val email: EditText = v.findViewById(R.id.edEmail)
+            val buttonSend: TextView = v.findViewById(R.id.btnSend)
+
+            buttonSend.setOnClickListener {
+                val dataEmail = email.text.toString()
+
+                if (dataEmail.isEmpty()){
+                    messageError("Email Masih Kosong")
+                } else {
+                    resetPasswordWithEmail(dataEmail)
+                }
+            }
             dialog.setCancelable(true)
             dialog.show()
         }
@@ -112,15 +139,37 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    private fun loadingAnimasi(showOrhide: Int) {
+        loadingBar.visibility = showOrhide
+    }
+
+    private fun resetPasswordWithEmail(dataEmail: String) {
+        FirebaseAuth.getInstance().sendPasswordResetEmail(dataEmail)
+            .addOnCompleteListener {
+                if (it.isSuccessful){
+                    messageError("Link Reset Password telah dikirim ke Email...")
+                } else {
+                    messageError("reset Password Gagal...")
+                }
+            }
+    }
+
     private fun signInWithEmailAndPass(email: String, pass: String) {
         firebaseAuth.signInWithEmailAndPassword(email, pass)
             .addOnCompleteListener {
                 if (it.isSuccessful){
-                    checkIfDataRegisterNotComplete(uid)
+                    val currentAccount = firebaseAuth.currentUser
+                    if (currentAccount != null){
+                        uid = currentAccount.uid
+                    }
+                    checkIfDataRegisterNotComplete(uid!!)
+                    loadingAnimasi(hideLoading)
                 } else {
                     messageError("Login Gagal...")
                 }
+                loadingAnimasi(hideLoading)
             }
+
     }
 
     private val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
@@ -132,7 +181,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun messageError(s: String) {
-        Toast.makeText(this,s , Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, s , Toast.LENGTH_SHORT).show()
     }
 
     private fun handleResult(task: Task<GoogleSignInAccount>) {

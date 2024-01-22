@@ -19,6 +19,12 @@
         <item name="fontFamily">@font/plusjakartasans_medium</item>
     </style>
 
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="colorControlActivated">@color/main</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorHighlight">@color/white</item>
+    </style>
+
     <style name="btnOk" parent="ThemeOverlay.AppCompat">
         <item name="colorAccent">@color/main</item>
     </style>

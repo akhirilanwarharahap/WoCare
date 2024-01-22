@@ -58,4 +58,25 @@
     <string name="year">Year</string>
     <string name="month">Month</string>
     <string name="date">Date</string>
+    <string name="send">Send</string>
+    <string name="email">Email</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="cancel">Cancel</string>
+    <string name="logout_info">Are you sure want to Logout ?</string>
+
+    <string-array name="Months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
 </resources>

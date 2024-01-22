@@ -1,11 +1,16 @@
 package com.app.wocare
 
+import android.app.Dialog
+import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.widget.SwitchCompat
 import androidx.fragment.app.FragmentTransaction
@@ -25,6 +30,7 @@ class ProfileFragment : Fragment() {
     private lateinit var namaProfile: TextView
     private lateinit var tinggiProfile: TextView
     private lateinit var beratProfile: TextView
+    private lateinit var btnLogout: RelativeLayout
     private val mAuth: FirebaseAuth = Firebase.auth
     private lateinit var uid: String
 
@@ -40,6 +46,7 @@ class ProfileFragment : Fragment() {
         namaProfile = v.findViewById(R.id.nama)
         tinggiProfile = v.findViewById(R.id.tinggi)
         beratProfile = v.findViewById(R.id.berat)
+        btnLogout = v.findViewById(R.id.btnSignOut)
 
         //  get Data current User
         val fUser = mAuth.currentUser
@@ -55,6 +62,26 @@ class ProfileFragment : Fragment() {
             trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
             trans.commit()
         }
+
+        btnLogout.setOnClickListener {
+            val dialog = Dialog(requireContext())
+            dialog.setContentView(R.layout.dialog_logout)
+            dialog.setCancelable(false)
+            dialogFull(dialog)
+
+            val logout = dialog.findViewById<TextView>(R.id.logout)
+            val cancel = dialog.findViewById<TextView>(R.id.cancel)
+
+            logout.setOnClickListener {
+                functionLogout()
+                dialog.dismiss()
+            }
+            cancel.setOnClickListener {
+                dialog.dismiss()
+            }
+            dialog.show()
+        }
+
         //  set notif defaults
         tombolNotification.isChecked = false
         tombolNotification.text = tombolNotification.textOff
@@ -67,6 +94,22 @@ class ProfileFragment : Fragment() {
             }
         }
         return v
+    }
+
+    private fun dialogFull(d: Dialog) {
+        if (d.window != null){
+            d.window!!.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+            d.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        }
+    }
+
+    private fun functionLogout() {
+        mAuth.signOut()
+        val activity = requireActivity()
+        val i = Intent(activity, LoginActivity::class.java)
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        activity.startActivity(i)
+        activity.finish()
     }
 
     private fun getDataProfileFromFirebase(uid: String) {
