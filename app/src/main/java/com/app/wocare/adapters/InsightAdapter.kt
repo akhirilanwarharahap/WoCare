@@ -10,7 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.RecyclerView
-import com.app.wocare.DetailsInsightFragment
+import com.app.wocare.homeFragments.DetailsInsightFragment
 import com.app.wocare.HomeActivity
 import com.app.wocare.R
 import com.app.wocare.models.News

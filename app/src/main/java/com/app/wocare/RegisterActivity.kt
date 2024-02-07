@@ -2,10 +2,8 @@ package com.app.wocare
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.FragmentTransaction
+import com.app.wocare.registerFragments.Step1Fragment
 
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

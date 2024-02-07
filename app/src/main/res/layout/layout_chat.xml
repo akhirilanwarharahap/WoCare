@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start"
+    android:elevation="8dp"
+    android:background="@color/grey"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_gravity="start|bottom"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_chat"
+            android:contentDescription="@string/todo" />
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/botChat"
+                    android:padding="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:includeFontPadding="false"
+                    android:layout_marginStart="10dp"
+                    android:text="tssssssssss" />
+
+                <TextView
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="8sp"
+                    android:text="10.01"
+                    android:textColor="@color/black"
+                    android:padding="5dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

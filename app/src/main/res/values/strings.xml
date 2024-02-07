@@ -64,6 +64,11 @@
     <string name="sign_in">Sign In</string>
     <string name="cancel">Cancel</string>
     <string name="logout_info">Are you sure want to Logout ?</string>
+    <string name="gynecologist">Gynecologist</string>
+    <string name="our_doctors">Our Doctors</string>
+    <string name="specialist_doctors">Specialist Doctors</string>
+    <string name="consult_doctors">Consult Doctors</string>
+    <string name="get_expert_advice_from">Get Expert Advice From</string>
 
     <string-array name="Months">
         <item>January</item>

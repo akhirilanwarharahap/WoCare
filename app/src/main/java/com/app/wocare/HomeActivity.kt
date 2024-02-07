@@ -8,6 +8,12 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import com.app.wocare.homeFragments.InsightFragment
+import com.app.wocare.homeFragments.MonthFragment
+import com.app.wocare.homeFragments.ProfileFragment
+import com.app.wocare.homeFragments.TodayFragment
+import com.app.wocare.homeFragments.WoAskFragment
+import com.app.wocare.homeFragments.YearFragment
 import com.app.wocare.models.UserDetails
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth

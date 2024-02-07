@@ -21,6 +21,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/todo" />
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/take"
             android:layout_width="wrap_content"
@@ -35,7 +44,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:contentDescription="TODO" />
+            android:contentDescription="@string/todo" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/flip"
@@ -51,8 +60,23 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/take"
-            android:contentDescription="TODO" />
+            android:contentDescription="@string/todo" />
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tint="@null"
+            android:src="@drawable/gallery_ic"
+            android:scaleType="center"
+            app:fabCustomSize="60dp"
+            app:maxImageSize="60dp"
+            app:backgroundTint="@android:color/transparent"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/take"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/todo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
